@@ -6,6 +6,7 @@ function Flights(props) {
     const places = props.flights.Places
     const currencies = props.flights.Currencies
     const carriers = props.flights.Carriers  
+    console.log(carriers)
 
     function formatCurrency(price) {
         if (currencies[0].SymbolOnLeft) {
@@ -15,10 +16,17 @@ function Flights(props) {
     }
 
     function namePlace(placeid) {
-        if (placeid == places[0].PlaceID) {
+        if (placeid === places[0].PlaceID) {
             return places[0].Name
         }
         return places[1].Name
+    }
+    function nameCarrier(carrierid) {
+        for (let i=0; i < carriers.length; i++) {
+            if (carrierid === carriers[i].CarrierId) {
+                return carriers[i].Name
+            }
+        }
     }
 
     return (
@@ -42,6 +50,7 @@ function Flights(props) {
                         <th>{namePlace(quote.OutboundLeg.DestinationId)}</th>
                         <th>{formatCurrency(quote.MinPrice)}</th>
                         <th>{quote.OutboundLeg.DepartureDate.split("T")[0]}</th>
+                        <th>{nameCarrier(quote.OutboundLeg.CarrierIds[0])}</th>
                     </tr>
                     );
                 })

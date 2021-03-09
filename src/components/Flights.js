@@ -1,16 +1,12 @@
 import React from "react";
 import "./Flights.css";
-//import Moment from 'moment';
 
 function Flights(props) {
-    //console.log(props)
     const quotes = props.flights.Quotes
     const places = props.flights.Places
     const currencies = props.flights.Currencies
-    console.log(currencies)
-    const carriers = props.flights.Carriers
-    console.log(carriers)
-    
+    const carriers = props.flights.Carriers  
+
     function formatCurrency(price) {
         if (currencies[0].SymbolOnLeft) {
             return currencies[0].Symbol + price
@@ -25,15 +21,8 @@ function Flights(props) {
         return places[1].Name
     }
 
-    function nameCarrier(carrierid) {
-        for (i=0; i < carriers.length; i++) {
-            if (carrierid == carriers[i].CarrierId) {
-                return carriers[i].Name
-            }
-    }
-
     return (
-        <div className="flights">
+        <div className="quotes">
             <table>
             <thead>
                 <tr>
@@ -53,7 +42,6 @@ function Flights(props) {
                         <th>{namePlace(quote.OutboundLeg.DestinationId)}</th>
                         <th>{formatCurrency(quote.MinPrice)}</th>
                         <th>{quote.OutboundLeg.DepartureDate.split("T")[0]}</th>
-                        <th>{nameCarrier(quote.CarrierIds[0])}</th>
                     </tr>
                     );
                 })

@@ -27,7 +27,7 @@ function FlightSearch() {
 
     const linkResponse = await fetch(
     `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/${encodeURIComponent(
-        originPlace)}/${encodeURIComponent(destinationPlace)}/${encodeURIComponent(outboundPartialDate)}/${encodeURIComponent(inboundPartialDate)}`, reqOptions);
+        originPlace + "-sky")}/${encodeURIComponent(destinationPlace + "-sky")}/${encodeURIComponent(outboundPartialDate)}/${encodeURIComponent(inboundPartialDate)}`, reqOptions);
     const linkResult = await linkResponse.json();
     console.log(linkResult)
     setFlightsInfo(linkResult);

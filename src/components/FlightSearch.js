@@ -70,7 +70,6 @@ function FlightSearch() {
 
       // sort quotes generated 
       let linkResult = await linkResponse.json();
-      console.log(linkResult);
       try {
         linkResult.Quotes.sort(function (a, b) {
           if (sortByCheapest == 1) {

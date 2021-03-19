@@ -9,7 +9,7 @@ function Flights(props) {
   const [cheapestPrice, setCheapestPrice] = useState(-1);
 
   // find cheapest price
-  if (quotes != null && cheapestPrice == -1) {
+  if (quotes != null && cheapestPrice === -1) {
     setCheapestPrice(quotes[0].MinPrice);
     for (let i=1; i < quotes.length;i++) {
       if (cheapestPrice > quotes[i].MinPrice) {

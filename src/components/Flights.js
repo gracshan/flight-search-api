@@ -6,13 +6,19 @@ function Flights(props) {
   const places = props.flights.Places;
   const currencies = props.flights.Currencies;
   const carriers = props.flights.Carriers;
-  const [cheapestPrice, setCheapestPrice] = useState(0);
+  const [cheapestPrice, setCheapestPrice] = useState(-1);
 
-  //to-do: get cheapest price
+  // find cheapest price
   if (quotes != null && cheapestPrice == -1) {
     setCheapestPrice(quotes[0].MinPrice);
+    for (let i=1; i < quotes.length;i++) {
+      if (cheapestPrice > quotes[i].MinPrice) {
+          setCheapestPrice(quotes[i].MinPrice);
+      }
+    }
   }
 
+  // return price display according to given currency
   function formatCurrency(price) {
     if (currencies[0].SymbolOnLeft) {
       return currencies[0].Symbol + price;
@@ -20,6 +26,7 @@ function Flights(props) {
     return price + currencies[0].Symbol;
   }
 
+  // return name of place that has corresponding placeid
   function namePlace(placeid) {
     if (placeid === places[0].PlaceID) {
       return places[0].Name;
@@ -27,6 +34,7 @@ function Flights(props) {
     return places[1].Name;
   }
 
+  // return name of carrier that has corresponding carrierid
   function nameCarrier(carrierid) {
     for (let i = 0; i < carriers.length; i++) {
       if (carrierid === carriers[i].CarrierId) {
@@ -35,6 +43,7 @@ function Flights(props) {
     }
   }
 
+  // return true if quote has inbound leg, false otherwise
   function checkInbound() {
     if ("InboundLeg" in quotes[0]) {
       return true;
@@ -42,9 +51,6 @@ function Flights(props) {
     return false;
   }
 
-  //to-do: allow users to sort by price
-  //highlight cheapest price
-  //map sortedList
   return (
     <div className="quotes">
       <table>
@@ -60,13 +66,13 @@ function Flights(props) {
         </thead>
         <tbody>
           {quotes != null ? (
-            sortedList.map((quote) => {
+            quotes.map((quote) => {
               return (
                 <tr 
                 id={"tableinput"} 
                 key={quote.QuoteId} 
                 style={
-                  quote.MinPrice === quotes[0].MinPrice
+                  quote.MinPrice === cheapestPrice
                     ? { backgroundColor: "#FFD700" }
                     : { backgroundColor: "#FFFFFF" }
                 }

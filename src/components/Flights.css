@@ -4,6 +4,8 @@
 
 table {
     border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
 }  
 
 td, th {
@@ -11,5 +13,5 @@ td, th {
     padding: 0.5rem;
     text-align: left;
 }
-  
+
   

@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Header title="Flight Search"></Header>
       <FlightSearch></FlightSearch>
-      <Footer title="2021 || Made with &#x2665; in McLean"></Footer>
+      <Footer title="2021 || Made with &#x2665; in Ithaca"></Footer>
     </div>
   );
 }

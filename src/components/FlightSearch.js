@@ -77,10 +77,10 @@ function FlightSearch() {
           }
           return a.MinPrice - b.MinPrice;
         });
-      setFlightsInfo(linkResult);
+        setFlightsInfo(linkResult);
       }
       catch(err) {
-        return null;
+        setFlightsInfo({});
       }
     }
 

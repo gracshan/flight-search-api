@@ -6,16 +6,16 @@ function Flights(props) {
   const places = props.flights.Places;
   const currencies = props.flights.Currencies;
   const carriers = props.flights.Carriers;
-  const [cheapestPrice, setCheapestPrice] = useState(-1);
 
-  // find cheapest price
-  if (quotes != null && cheapestPrice === -1) {
-    setCheapestPrice(quotes[0].MinPrice);
+  // return cheapest price in quotes
+  function findCheapestPrice () {
+    let cheapestPrice = quotes[0].MinPrice;
     for (let i=1; i < quotes.length;i++) {
       if (cheapestPrice > quotes[i].MinPrice) {
-          setCheapestPrice(quotes[i].MinPrice);
+          cheapestPrice = (quotes[i].MinPrice);
       }
     }
+    return cheapestPrice
   }
 
   // return price display according to given currency
@@ -72,7 +72,7 @@ function Flights(props) {
                 id={"tableinput"} 
                 key={quote.QuoteId} 
                 style={
-                  quote.MinPrice === cheapestPrice
+                  quote.MinPrice === findCheapestPrice()
                     ? { backgroundColor: "#FFD700" }
                     : { backgroundColor: "#FFFFFF" }
                 }

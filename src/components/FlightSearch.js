@@ -43,6 +43,7 @@ function FlightSearch() {
   }
 
   function handleSubmit(e) {
+    setShowFlights(false)
     e.preventDefault();
     async function fetchMyAPI() {
       const reqOptions = {

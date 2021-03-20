@@ -18,7 +18,7 @@ The Web App helps travelers find the cheapest flights for their travels! By prov
 
 ## Other notes
 
-- I decided to leave the user input in the text boxes instead of resetting them after each sumbit. This allows the user to check their inputs and change them easier if needed.
+- I decided to leave the user input in the text boxes instead of resetting them after each submit. This allows the user to check their inputs and change them easily if needed.
 - By setting showFlights to false at the beginning of handeling a sumbit, I was able to create a visual indication that the results have refreshed since the tabel blinks out then back in.
 
 This project was a great introduction to web development and React. I hope you enjoy!

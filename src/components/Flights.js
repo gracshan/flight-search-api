@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Flights.css";
 
 function Flights(props) {
@@ -28,7 +27,7 @@ function Flights(props) {
 
   // return name of place that has corresponding placeid
   function namePlace(placeid) {
-    if (placeid === places[0].PlaceID) {
+    if (placeid === places[0].PlaceId) {
       return places[0].Name;
     }
     return places[1].Name;
@@ -77,7 +76,7 @@ function Flights(props) {
                     : { backgroundColor: "#FFFFFF" }
                 }
                 >
-                  <th>{namePlace(quote.OutboundLeg.OriginID)}</th>
+                  <th>{namePlace(quote.OutboundLeg.OriginId)}</th>
                   <th>{namePlace(quote.OutboundLeg.DestinationId)}</th>
                   <th>{formatCurrency(quote.MinPrice)}</th>
                   <th>{quote.OutboundLeg.DepartureDate.split("T")[0]}</th>

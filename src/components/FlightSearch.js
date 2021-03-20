@@ -72,7 +72,7 @@ function FlightSearch() {
       let linkResult = await linkResponse.json();
       try {
         linkResult.Quotes.sort(function (a, b) {
-          if (sortByCheapest === 1) {
+          if (sortByCheapest == 1) {
             return b.MinPrice - a.MinPrice;
           }
           return a.MinPrice - b.MinPrice;

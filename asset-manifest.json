@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/flight-search-api/static/css/main.8e6704c1.chunk.css",
-    "main.js": "/flight-search-api/static/js/main.3e67c774.chunk.js",
-    "main.js.map": "/flight-search-api/static/js/main.3e67c774.chunk.js.map",
+    "main.js": "/flight-search-api/static/js/main.bfaa2bbc.chunk.js",
+    "main.js.map": "/flight-search-api/static/js/main.bfaa2bbc.chunk.js.map",
     "runtime-main.js": "/flight-search-api/static/js/runtime-main.1396f49d.js",
     "runtime-main.js.map": "/flight-search-api/static/js/runtime-main.1396f49d.js.map",
     "static/js/2.74419688.chunk.js": "/flight-search-api/static/js/2.74419688.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1396f49d.js",
     "static/js/2.74419688.chunk.js",
     "static/css/main.8e6704c1.chunk.css",
-    "static/js/main.3e67c774.chunk.js"
+    "static/js/main.bfaa2bbc.chunk.js"
   ]
 }

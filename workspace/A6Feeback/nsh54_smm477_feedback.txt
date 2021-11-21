@@ -1,0 +1,15 @@
+# A6 feedback for nsh54_smm477
+
+This is Grace, grading your submission for A6.  You are implicitly awarded points (up to 100) for code that satisfies the requirements of the assignment.  If a requirement is not satisfied, a points deduction will be listed here under the appropriate heading, along with the text of the requirement (phrased in terms of what your code _should_ have done) and possibly some clarifying comments.  Additionally, penalties may be deducted for general errors (these are phrased in terms of what your code _shouldn't_ have done).  At the bottom is your total score.
+
+Deductions for TODO 6:
+* -1: Tests `isHit`
+* -1: Sets color to blue otherwise
+* -1: Upper-left corner of circle is (`x-radius`,`y-radius`)
+* -1: Width and height of circle are `2*radius`
+
+Deductions for TODO 7:
+* -2: Tests whether Euclidian distance between (x,y) and (cx,cy) is <= radius
+  > Should check (cx - x) * (cx - x) + (cy - y) * (cy - y) <= radius * radius
+
+Total: 94 / 100

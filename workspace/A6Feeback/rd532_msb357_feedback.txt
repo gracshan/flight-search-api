@@ -1,0 +1,17 @@
+# A6 feedback for rd532_msb357
+
+This is Grace, grading your submission for A6.  You are implicitly awarded points (up to 100) for code that satisfies the requirements of the assignment.  If a requirement is not satisfied, a points deduction will be listed here under the appropriate heading, along with the text of the requirement (phrased in terms of what your code _should_ have done) and possibly some clarifying comments.  Additionally, penalties may be deducted for general errors (these are phrased in terms of what your code _shouldn't_ have done).  At the bottom is your total score.
+
+Deductions for TODO 7:
+* -1: Returns false if already hit
+  > Does not check if hit
+* -2: Tests whether Euclidian distance between (x,y) and (cx,cy) is <= radius
+  > Should check (cx - x) * (cx - x) + (cy - y) * (cy - y) <= radius * radius
+* -2: Sets isHit to true if hit (and does not reset to false if not hit)
+  > Should not reset to false
+
+Deductions for TODO 15:
+* -1: Error dialog title and message set using properties of exception
+  > Hard-coded string
+
+Total: 94 / 100

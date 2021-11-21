@@ -1,0 +1,11 @@
+# A6 feedback for are52
+
+This is Grace, grading your submission for A6.  You are implicitly awarded points (up to 100) for code that satisfies the requirements of the assignment.  If a requirement is not satisfied, a points deduction will be listed here under the appropriate heading, along with the text of the requirement (phrased in terms of what your code _should_ have done) and possibly some clarifying comments.  Additionally, penalties may be deducted for general errors (these are phrased in terms of what your code _shouldn't_ have done).  At the bottom is your total score.
+
+Deductions for TODO 4:
+* -1: Invokes `super.paintComponent(g)` (at least when active)
+
+Deductions for TODO 8:
+* -1: Do nothing if inactive
+
+Total: 98 / 100

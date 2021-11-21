@@ -1,0 +1,27 @@
+# A6 feedback for mjf347
+
+This is Grace, grading your submission for A6.  You are implicitly awarded points (up to 100) for code that satisfies the requirements of the assignment.  If a requirement is not satisfied, a points deduction will be listed here under the appropriate heading, along with the text of the requirement (phrased in terms of what your code _should_ have done) and possibly some clarifying comments.  Additionally, penalties may be deducted for general errors (these are phrased in terms of what your code _shouldn't_ have done).  At the bottom is your total score.
+
+Deductions for TODO 5:
+* -1: Does nothing if inactive
+* -1: Tests whether `targetCount < maxTargets`
+  > Should be just < not <=
+
+Deductions for TODO 6:
+* -1: Upper-left corner of circle is (`x-radius`,`y-radius`)
+* -1: Width and height of circle are `2*radius`
+
+Deductions for TODO 7:
+* -2: Sets isHit to true if hit (and does not reset to false if not hit)
+
+Deductions for TODO 8:
+* -1: Do nothing if inactive
+
+Deductions for TODO 9:
+* -1: Ensures that property name is "GameScore"
+
+Deductions for TODO 15:
+* -2: Shows message dialog on error
+* -2: Error dialog title and message set using properties of exception
+
+Total: 88 / 100

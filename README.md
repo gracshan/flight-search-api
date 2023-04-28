@@ -10,7 +10,7 @@ The Web App helps travelers find the cheapest flights for their travels! By prov
     - Input for locations should be a valid 3 or 4 alphabetic code.
     - I chose to display the options through a calendar type. This restricts the input to the format "YYYY-MM-DD", and prevents the usage of the formats "YYYY-MM", "YYYY", or "anytime".
 - Allow users to select their currency preference when searching for flights
-  - Notes: The default is set to "USD", and the users can change their currency prefernce through the dropdown menu listing all available currencies.
+  - Notes: The default is set to "USD", and the users can change their currency preference through the dropdown menu listing all available currencies.
 - Use intuitive UI principles to highlight or call out the cheapest flights for a user running a search
   - Notes: The cheapest flight is highlighted gold.
 - When all flight options are listed, allow the user to sort the results by cheapest to highest priced & vice versa
